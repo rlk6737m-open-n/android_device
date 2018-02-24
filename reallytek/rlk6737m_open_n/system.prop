@@ -52,20 +52,20 @@ ro.audio.silent=0
 
 ro.zygote.preload.enable=0
 
-# temporary enables NAV bar (soft keys)
-qemu.hw.mainkeys=0
+# temporary disables NAV bar (soft keys)
+qemu.hw.mainkeys=1
 
 ro.kernel.zio=38,108,105,16
 #ro.kernel.qemu=1
 #ro.kernel.qemu.gles=0
 #ro.boot.selinux=disable
 
-ro.sf.lcd_density=240
+ro.sf.lcd_density=360
 
 # performance
 ro.mtk_perf_simple_start_win=1
 ro.mtk_perf_fast_start_win=1
 ro.mtk_perf_response_time=1
 #add for fingerprint start
-persist.fingerprint = microarray
+persist.fingerprint = goodix
 #add for fingerprint end
