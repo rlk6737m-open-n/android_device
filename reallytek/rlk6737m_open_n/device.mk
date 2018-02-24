@@ -208,19 +208,19 @@ $(call inherit-product-if-exists, vendor/reallytek/libs/$(MTK_TARGET_PROJECT)/de
 PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/system
 $(call inherit-product, build/target/product/verity.mk)
 ifeq ($(strip $(FINGERPRINT_GOODIX_SUPPORT_GF368M)), yes)
-PRODUCT_COPY_FILES += vendor/reallytek/libs/fingerprint/goodix/GX368/x64/fingerprint.default.so:system/lib64/hw/fingerprint.goodix.so
-PRODUCT_COPY_FILES += vendor/reallytek/libs/fingerprint/goodix/GX368/x64/gxfingerprint.default.so:system/lib64/hw/gxfingerprint.default.so
-PRODUCT_COPY_FILES += vendor/reallytek/libs/fingerprint/goodix/GX368/x64/libfp_client.so:system/lib64/libfp_client.so
-PRODUCT_COPY_FILES += vendor/reallytek/libs/fingerprint/goodix/GX368/x64/libfpservice.so:system/lib64/libfpservice.so
-PRODUCT_COPY_FILES += vendor/reallytek/libs/fingerprint/goodix/GX368/x64/libalgoandroid.so:system/lib64/libalgoandroid.so
-PRODUCT_COPY_FILES += vendor/reallytek/libs/fingerprint/goodix/GX368/x64/gx_fpd:system/bin/gx_fpd
+PRODUCT_COPY_FILES += vendor/reallytek/libs/fingerprint/goodix/GX368/x64/fingerprint.default.so:system/vendor/lib64/hw/fingerprint.mt6737m.so
+PRODUCT_COPY_FILES += vendor/reallytek/libs/fingerprint/goodix/GX368/x64/gxfingerprint.default.so:system/vendor/lib64/hw/gxfingerprint.mt6737m.so
+PRODUCT_COPY_FILES += vendor/reallytek/libs/fingerprint/goodix/GX368/x64/libfp_client.so:system/vendor/lib64/libfp_client.so
+PRODUCT_COPY_FILES += vendor/reallytek/libs/fingerprint/goodix/GX368/x64/libfpservice.so:system/vendor/lib64/libfpservice.so
+PRODUCT_COPY_FILES += vendor/reallytek/libs/fingerprint/goodix/GX368/x64/libalgoandroid.so:system/vendor/lib64/libalgoandroid.so
+PRODUCT_COPY_FILES += vendor/reallytek/libs/fingerprint/goodix/GX368/x64/gx_fpd:system/vendor/bin/gx_fpd
 PRODUCT_COPY_FILES += frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml
 PRODUCT_PACKAGES += fingerprintd
 endif
 ifeq ($(strip $(FINGERPRINT_GOODIX_SUPPORT_AFS121)), yes)
-PRODUCT_COPY_FILES += vendor/reallytek/libs/fingerprint/microarray/AFS1211/x64/fingerprint.default.so:system/lib64/hw/fingerprint.microarray.so
-PRODUCT_COPY_FILES += vendor/reallytek/libs/fingerprint/microarray/AFS1211/x64/libfprint-x64.so:system/lib64/libfprint-x64.so
-PRODUCT_COPY_FILES += vendor/reallytek/libs/fingerprint/microarray/AFS1211/x64/libma-fpservice.so:system/lib64/libma-fpservice.so
+PRODUCT_COPY_FILES += vendor/reallytek/libs/fingerprint/microarray/AFS1211/x64/fingerprint.default.so:system/vendor/lib64/hw/fingerprint.microarray.so
+PRODUCT_COPY_FILES += vendor/reallytek/libs/fingerprint/microarray/AFS1211/x64/libfprint-x64.so:system/vendor/lib64/libfprint-x64.so
+PRODUCT_COPY_FILES += vendor/reallytek/libs/fingerprint/microarray/AFS1211/x64/libma-fpservice.so:system/vendor/lib64/libma-fpservice.so
 PRODUCT_COPY_FILES += frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml
 PRODUCT_PACKAGES += fingerprintd
 endif
